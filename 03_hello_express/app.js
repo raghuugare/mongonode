@@ -2,11 +2,11 @@ var express = require('express'),
     app = express();
 
 app.get('/', function(req, res){
-    res.send('Hello World! :~)');
+    res.status(200).send('Hello World! :~)');
 });
 
 app.get('*', function(req, res) {
-    res.send(404, 'Page not found! :~(');
+    res.status(404).send('Page not found! :~(');
 });
 
 app.listen(8080);
